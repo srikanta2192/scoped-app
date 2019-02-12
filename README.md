@@ -5,7 +5,7 @@ This repo contains sample project structure for different types of scoped apps.
 This is a minimum structure of a scoped application. It doesn't need to use any of the JS tooling (preprocessors SASS, SCSS, transpilers, etc).
 
 ## example-spa-scoped-app
-This is a more complex structure that utilizes modern JS tooling (webpack, gulp, npm, etc).  Use this structure if you know what you're doing.
+This is a more complex structure that utilizes modern JS tooling (webpack, gulp, npm, etc). You may need to adapt the `package.json` and `.builderc` for tectonic/seismic components.
 
 ## Latest versions
 Both of the above examples use a parent pom to hide most of the complexity in a maven build. See [https://code.devsnc.com/dev/snc-parent-pom] for implementation details.

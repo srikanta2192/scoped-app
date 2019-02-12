@@ -1,15 +1,19 @@
-This is a sample scoped app that uses a npm tool (gulp).
+This is a sample scoped app that uses npm.
 
-Available maven commands:
+Available npm scripts:
 
-	$ mvn test -Pnpm-watch
-	$ mvn test -Pnpm-watch -Dnpm.script="run <script>"
-	$ mvn install
+	$ npm run ci:build
+	$ npm run ci:test
 
-Use the wrapper script:
-
-	$ ./build.sh watch  # watch for changes and copy to target folder
-	$ ./build.sh <script>  # execute "npm run <script>"
-
-Please note that everytime you change dependencies in package.json, you'll need 
+Please note that everytime you change dependencies in package.json, you'll need
 to run "npm i" to update package-lock.json and check that in.
+
+You may want to use [fswatch](https://github.com/emcrisostomo/fswatch) to continuously
+build on changes:
+
+	$ brew install fswatch
+	$ fswatch -o -e '.*' -i 'src/main/plugins/.*' . | xargs -n1 -I{} mvn package
+
+To run just one script, pass the `npm.script` property:
+
+	$  fswatch -o -e '.*' -i 'src/main/plugins/.*' . | xargs -n1 -I{} mvn package -Dnpm.script=ci:test

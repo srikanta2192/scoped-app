@@ -1,0 +1,13 @@
+tools:
+  - node
+  - npm
+
+steps:
+  npm_ci_build: run ci:build --if-present
+  npm_ci_test: run ci:test --if-present
+  npm_ci_package: run ci:package --if-present
+  npm_ci_deploy: run ci:deploy --if-present
+  npm_release_build: run release:build --if-present
+  npm_release_test: run release:test --if-present
+  npm_release_package: run release:package --if-present
+  npm_release_deploy: run release:deploy --if-present

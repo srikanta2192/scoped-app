@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <plugin
-	id="com.sn_exampleapp"
-	name="Example Scoped App"
-	version="${project.version}"
+	version="${plugin.version}"
+	id="${plugin.dir}"
+	name="${plugin.name}"
+	licensable="${plugin.licensable}"
+	scope_name="${plugin.scope_name}"
+	scope_sys_id="${plugin.scope_sys_id}"
 	provider_name="ServiceNow">
 
 	<description>Example scoped app.</description>

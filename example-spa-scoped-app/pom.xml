@@ -5,8 +5,8 @@
 
 	<parent>
 		<groupId>com.snc</groupId>
-		<artifactId>snc-app-parent</artifactId>
-		<version>2.8.0.5</version>
+		<artifactId>snc-parent</artifactId>
+		<version>2.8.0.10-rc.5</version>
 	</parent>
 
 	<artifactId>example-spa-scoped-app</artifactId>
@@ -17,10 +17,6 @@
 		<developerConnection>scm:git:ssh://code.devsnc.com/dev/example-scoped-apps</developerConnection>
 		<tag>master</tag>
 	</scm>
-
-	<properties>
-		<plugin.dir>com.sn_examplespa</plugin.dir>
-	</properties>
 
 	<repositories>
 		<repository>
