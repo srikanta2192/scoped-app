@@ -19,5 +19,8 @@
   "scripts": {
     "ci:build": "npm ci",
     "ci:test": "builder run npm:test"
+  },
+  "publishConfig": {
+    "registry": "https://artifact.devsnc.com/content/repositories/snc-npm-releases/"
   }
 }
