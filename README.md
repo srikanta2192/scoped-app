@@ -16,7 +16,7 @@ When you make copy of these projects, please make sure to use the latest parent 
 	
 	
 	
-### these are the options specificed the Maven release build.  you can override this options by specifying them	in your pom
+### these are the options specified in the Maven build.  You can overwrite these by specifying them as properties in your pom or in a build.properties file at the job level
 	
 	def opts = [
 	    owners: '',
