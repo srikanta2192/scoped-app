@@ -16,7 +16,7 @@ When you make copy of these projects, please make sure to use the latest parent 
 	
 	
 	
-## these are the options specificed the Maven release build.  you can override this options by specificing them	in your pom
+### these are the options specificed the Maven release build.  you can override this options by specifying them	in your pom
 	
 	def opts = [
 	    branchFilterIncludes: env.MULTIBRANCH_FILTER_INCLUDES ?: "paris orlando newyork madrid london kingston master secops-dev dev stable PR-* pr/* project/* story/* feature/*",
