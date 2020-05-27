@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+  <sys_script_include action="INSERT_OR_UPDATE">
+    <access>package_private</access>
+    <active>true</active>
+    <api_name>sn_exampleapp.ModelCategoryGlAccount</api_name>
+    <caller_access/>
+    <client_callable>false</client_callable>
+    <description/>
+    <name>ModelCategoryGlAccount</name>
+    <script><![CDATA[var ModelCategoryGlAccount = Class.create();
+ModelCategoryGlAccount.prototype = {
+    initialize: function() {},
+
+    updateGlAccount: function(modelCategoryGR) {
+        if (!modelCategoryGR.u_gl_account) {
+            var parentModelGR = new GlideRecordSecure("sn_bcm_model_category_test");
+            parentModelGR.get(modelCategoryGR.u_parent_model);
+            modelCategoryGR.u_gl_account = parentModelGR.u_gl_account;
+        }
+    },
+    type: 'ModelCategoryGlAccount'
+};]]></script>
+    <sys_class_name>sys_script_include</sys_class_name>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2020-05-27 10:44:02</sys_created_on>
+    <sys_id>91d67e9568091010b41123b4dac9efc9</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_name>ModelCategoryGlAccount</sys_name>
+    <sys_package display_value="Example App" source="sn_exampleapp">70fae9692b1c0200c5244f74b4da15d2</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Example App">70fae9692b1c0200c5244f74b4da15d2</sys_scope>
+    <sys_update_name>sys_script_include_91d67e9568091010b41123b4dac9efc9</sys_update_name>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2020-05-27 10:44:02</sys_updated_on>
+  </sys_script_include>
+</record_update>
