@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+  <sys_script_include action="INSERT_OR_UPDATE">
+    <access>package_private</access>
+    <active>true</active>
+    <api_name>sn_bcm.ProductFeedback</api_name>
+    <caller_access/>
+    <client_callable>false</client_callable>
+    <description/>
+    <name>ProductFeedback</name>
+    <script><![CDATA[var ProductFeedback = Class.create();
+ProductFeedback.prototype = {
+    initialize: function() {},
+    calculateRating: function(feedbackGR) {
+        var productFeedbackGR = new GlideRecordSecure('sn_bcm_feedback_scoped_test');
+        productFeedbackGR.addQuery('u_product', '=', feedbackGR.u_product);
+        productFeedbackGR.query();
+        var totalRows = productFeedbackGR.getRowCount();
+        var rating = 0;
+        while (productFeedbackGR.next()) {
+            rating = rating + productFeedbackGR.u_rating;
+        }
+        rating = rating / totalRows;
+        gs.info("this is the ratgin", rating);
+    },
+    type: 'ProductFeedback'
+};]]></script>
+    <sys_class_name>sys_script_include</sys_class_name>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2020-05-27 14:38:25</sys_created_on>
+    <sys_id>3cfb23dd68491010b41123b4dac9ef6d</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_name>ProductFeedback</sys_name>
+    <sys_package display_value="Business Continuity Management - Core" source="sn_bcm">3ff1278f132a40103423f8fed144b091</sys_package>
+    <sys_policy/>
+    <sys_scope display_value="Business Continuity Management - Core">3ff1278f132a40103423f8fed144b091</sys_scope>
+    <sys_update_name>sys_script_include_3cfb23dd68491010b41123b4dac9ef6d</sys_update_name>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2020-05-27 14:38:25</sys_updated_on>
+  </sys_script_include>
+</record_update>
