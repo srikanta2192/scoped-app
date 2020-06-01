@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_documentation element="u_gl_account" label="GL Account" language="en" table="sn_bcm_model_category">
+    <sys_documentation action="INSERT_OR_UPDATE">
+      <element>u_gl_account</element>
+      <help/>
+      <hint/>
+      <label>GL Account</label>
+      <language>en</language>
+      <name>sn_bcm_model_category</name>
+      <plural>GL Accounts</plural>
+      <sys_class_name>sys_documentation</sys_class_name>
+      <sys_created_by>admin</sys_created_by>
+      <sys_created_on>2020-05-26 12:42:29</sys_created_on>
+      <sys_id>c178ce013d499010b4110a2b7157bdcb</sys_id>
+      <sys_mod_count>0</sys_mod_count>
+      <sys_name>GL Account</sys_name>
+      <sys_package display_value="Business Continuity Management - Core" source="sn_bcm">3ff1278f132a40103423f8fed144b091</sys_package>
+      <sys_policy/>
+      <sys_scope display_value="Business Continuity Management - Core">3ff1278f132a40103423f8fed144b091</sys_scope>
+      <sys_update_name>sys_documentation_sn_bcm_model_category_u_gl_account_en</sys_update_name>
+      <sys_updated_by>admin</sys_updated_by>
+      <sys_updated_on>2020-05-26 12:42:29</sys_updated_on>
+      <url/>
+      <url_target/>
+    </sys_documentation>
+  </sys_documentation>
+</record_update>

@@ -20,6 +20,16 @@ ProductFeedback.prototype = {
             rating = rating + productFeedbackGR.u_rating;
         }
         rating = rating / totalRows;
+        var productGR = new GlideRecordSecure('sn_bcm_product_test');
+        productGR.get(feedbackGR.u_product);
+
+        if (rating < 4 && totalRows > 2) {
+            productGR.u_status = "Blacklisted";
+        } else {
+            productGR.u_status = "Available";
+        }
+        productGR.update();
+
         gs.info("this is the ratgin", rating);
     },
     type: 'ProductFeedback'
@@ -28,13 +38,13 @@ ProductFeedback.prototype = {
     <sys_created_by>admin</sys_created_by>
     <sys_created_on>2020-05-27 14:38:25</sys_created_on>
     <sys_id>3cfb23dd68491010b41123b4dac9ef6d</sys_id>
-    <sys_mod_count>0</sys_mod_count>
+    <sys_mod_count>7</sys_mod_count>
     <sys_name>ProductFeedback</sys_name>
     <sys_package display_value="Business Continuity Management - Core" source="sn_bcm">3ff1278f132a40103423f8fed144b091</sys_package>
     <sys_policy/>
     <sys_scope display_value="Business Continuity Management - Core">3ff1278f132a40103423f8fed144b091</sys_scope>
     <sys_update_name>sys_script_include_3cfb23dd68491010b41123b4dac9ef6d</sys_update_name>
     <sys_updated_by>admin</sys_updated_by>
-    <sys_updated_on>2020-05-27 14:38:25</sys_updated_on>
+    <sys_updated_on>2020-05-27 16:50:08</sys_updated_on>
   </sys_script_include>
 </record_update>
